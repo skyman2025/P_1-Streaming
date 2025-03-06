@@ -1,6 +1,7 @@
 # Proyecto Individual
 
-![presentacion](https://github.com/Fe23arg/Pi1_dev2_12/blob/main/raw/pre_we.jpg)
+![presentacion](https://github.com/skyman2025/P_1-Streaming/blob/main/img/plat-str2.png)
+
 
 Proyecto individual: consultas realizadas sobre los datos  de peliculas
 devolviendo resultados requeridos en formato especificos.
