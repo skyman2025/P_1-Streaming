@@ -1,7 +1,6 @@
 # Analisis sobre peliculas en Plataforma de Streaming
 
-![presentacion](https://github.com/skyman2025/P_1-Streaming/blob/main/img/plat-str2.png)
-
+![presentacion](https://github.com/skyman2025/P_1-Streaming/blob/main/img/plat-str4.jpg)
 
 *[video explicativo](https://youtu.be/ksJkcfMct5g)*
 
