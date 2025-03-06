@@ -1,6 +1,6 @@
 # Proyecto Individual
 
-![presentacion](https://github.com/Fe23arg/Pi1_12_DEV/blob/main/raw/pre_we.jpg)
+![presentacion](https://github.com/Fe23arg/Pi1_dev2_12/blob/main/raw/pre_we.jpg)
 
 Proyecto individual: consultas realizadas sobre los datos  de peliculas
 devolviendo resultados requeridos en formato especificos.
@@ -48,9 +48,5 @@ devolviendo resultados requeridos en formato especificos.
 * [productoras_exitosas:Warner Bros](https://pi1-he-dev.onrender.com/productoras_exitosas/Warner%20Bros.)
 * [get_director :Michelle Danne](https://pi1-he-dev.onrender.com/get_director/Michelle%20Danner)
 * [recomendacion :Jumanji](https://pi1-he-dev.onrender.com/recomendacion/Jumanji)
-
-
-
-nota: el siguiente link lleva a [repo  con visualizacion](https://github.com/Fe23arg/Pi1_dev2_12)las consultas son hechas sobre las mismas bases pero se realizo aparte para continuar revisando y respetar el tiempo de entrega de este proyecto.Ademas prever posibles cortes o reparaciones q estuvieron haciendo en mi provincia por lo cual solicito  q revisen los archivos correspondiente con este : el EDA,ETL,EPI ya tiene los archivos correctos cuando se reestablecio coneccion.Notar que todas las funciones funcionaron al ejecutarse en cuadernos jupiter o colab  pero al ejecutarse en el entorno de fast api los resultados podian variar es algo propio del entorno ,debido al limite en sus versiones de librerias o recursos a usar ,al buscar cual era la razon me llevo a realizar varias versiones de lo mismos enpoint para ajustarlos  a las posibilidades del entorno de fat api o render como tambien la capacidad de calculo limito la cantidad de registro a usar , lo cual no era nesesario en una nube dedicada como google por ejemplo gracias y espero pueda tenerse todo en cuenta, y un resultado positivo.
 
 [pagina APi](https://fe23arg.github.io/Pi1_dev2_12/) Este link lleva a pagina que representa visualmente y mediante estructura api rest las consultas con un entorno separado
