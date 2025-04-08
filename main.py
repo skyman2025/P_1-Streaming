@@ -12,7 +12,7 @@ os.environ["OPENBLAS_L2SIZE"]="512k"
 
 app = FastAPI(title = 'Consultas en Plataforma sobre Peliculas')
 
-dft=pd.read_csv('https://raw.githubusercontent.com/Fe23arg/Pi1_12_DEV/main/raw/final_Api_12.csv')
+dft=pd.read_csv('https://raw.githubusercontent.com/skyman2025/P_1-Streaming/refs/heads/main/raw/final_Api_12.csv')
 #--------------------------------------------------------------------------------------
 @app.get("/")   
 def index():

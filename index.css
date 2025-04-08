@@ -3,8 +3,8 @@ body,html {
     margin:0px;
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
-    color:#fff;
-    background:rgb(70, 70, 70);
+    color:#0a0a0a;
+    background:rgb(238, 236, 236);
     scroll-behavior: smooth;
 }
 #loading {
@@ -72,93 +72,37 @@ body,html {
 }
 #middle {
     width:100%;
-    height:50vh;
-    background:linear-gradient(0deg,rgba(0,0,0,1),rgba(0,0,0,0)),url("https://github.com/Fe23arg/jek/blob/main/fondo_we.jpg?raw=true") center center fixed;
+    height:20vh;
+    background:linear-gradient(0deg,rgba(0,0,0,1),rgba(0,0,0,0));/*,url("https://github.com/Fe23arg/jek/blob/main/fondo_we.jpg?raw=true") center center fixed; */
     background-size:100% auto;
     background-repeat:no-repeat;
     color:white;
     display:flex;
     justify-content:center;
-    flex-direction:column;
+    /*flex-direction:column;*/
+    grid-auto-rows: auto;
     transition:1s ease-in-out;
     padding-top:20vh;
 }
 #tagline {
-    font-size:50px;
+    font-size:20px;
     width:60%;
 }
 #portfolio {
     width:80%;
     padding:2% 10%;
 }
-#portfolio div h1 {
-    font-size:40px;
-    background-image: linear-gradient(to left, #FF416C 0%, #FF4B2B 100%);
-    -webkit-background-clip:text;
-    background-clip:text;
-    -webkit-text-fill-color: transparent;
-    background-size:500% 500% !important;
-    -webkit-animation: Gradient 20s ease infinite;
-    -moz-animation: Gradient 20s ease infinite;
-    -o-animation: Gradient 20s ease infinite;
-    animation: Gradient 20s ease infinite;
-    font-family: 'Comfortaa', cursive;
-}
-#skills {
-    margin:4vh 0px !important;
-    padding:2vh 0px !important;
-}
+
+
 #work {
     margin:4vh 0px !important;
     padding:2vh 0px !important;
 }
-#work1 {
-    margin:4vh 0px !important;
-    padding:2vh 0px !important;
-}
-#contact {
-    margin:4vh 0px !important;
-    padding:2vh 0px !important;
-}
-#contact form {
-    width:100%;
-}
-#contact form input {
-    width:46%;
-    margin:20px 1%;
-    background:transparent;
-    border:0px;
-    border-bottom:2px solid rgba(255,255,255,0.5);
-    padding:8px 10px;
-    font-family: 'Comfortaa', cursive;
-    font-size:18px;
-    transition:0.4s ease-in-out;
-    color:#fff;
-}
-#contact form textarea {
-    width:96%;
-    margin:20px 1%;
-    padding:8px 10px;
-    border:0px;
-    border-bottom:2px solid rgba(255,255,255,0.5);
-    padding:8px 10px;
-    font-family: 'Comfortaa', cursive;
-    font-size:18px;
-    background:transparent;
-    resize:none;
-    transition:0.4s ease-in-out;
-    color:#fff;
-}
-#contact form input:focus {
-    outline:none;
-    border-bottom:2px solid rgba(255,255,255,1);
-}
-#contact form textarea:focus {
-    outline:none;
-    border-bottom:2px solid rgba(255,255,255,1);
-}
+
+
 ::placeholder {
     color:#fff;
+    font-size: 20px;
 }
 .btn_one {
     color:white;
@@ -188,32 +132,19 @@ body,html {
     font-size:18px;
     font-family: 'Comfortaa', cursive;
     font-weight:bold;
-    background:#fff;
+    background:#6c6dd4;
     transition:0.4s ease-in-out;
     margin:30px 10px;
 }
 .btn_two:hover {
-    background:transparent;
+    background:#a1aeca;
     cursor:pointer;
-    color:#fff;
+    color:#161616;
 }
 #details {
     margin:6vh 0px;
 }
-.btn_social {
-    font-size:18px;
-    color:#fff;
-    margin:40px 20px;
-    padding:15px 18px;
-    border-radius:50%;
-    background:#000;
-    transition:0.4s ease-in-out;
-}
-.btn_social:hover {
-    color:#000;
-    background:#fff;
-    cursor:pointer;
-}
+
 @media (max-width: 900px){
     #header {
         width:94%;
@@ -246,23 +177,15 @@ body,html {
         font-size:14px;
         padding:8px 20px;
     }
-    #contact form input {
-        width:92%;
-    }
-    #contact form textarea {
-        width:92%;
-    }
-    .btn_social {
-        font-size:14px;
-        margin:10px;
-        padding:10px 11px;
-    }
+
+
 }
 #footer {
     width:100%;
-    padding:10vh 0px;
+    padding: 15px;
     text-align:center;
     font-weight:bold;
+    background: #999a9c; 
 }
 #footer a {
     font-size:18px;
