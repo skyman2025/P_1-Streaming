@@ -37,7 +37,7 @@ $('#searchForm').submit(function(event) {
   event.preventDefault();  // Prevenir el comportamiento predeterminado del formulario
 
   var language = $('#language').val();  // Obtener el idioma ingresado
-  var url = `https://pi1-he-dev.onrender.com/peliculas_idioma/${language}`;  // URL de la API con el idioma
+  var url = `https://p-1-streaming.onrender.com/peliculas_idioma/${language}`;  // URL de la API con el idioma
 
   // Verificar si se ingresó un idioma
   if (!language) {
