@@ -32,51 +32,61 @@ setTimeout(function(){
     },200);
 },300);
 
+document.getElementById('searchForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-$('#searchForm').submit(function(event) {
-  event.preventDefault();  // Prevenir el comportamiento predeterminado del formulario
+    const idioma = document.getElementById('language').value.trim().toLowerCase();
+    const resultContainer = document.getElementById('resultContainer');
 
-  var language = $('#language').val();  // Obtener el idioma ingresado
-  var url = `https://p-1-streaming.onrender.com/peliculas_idioma/${language}`;  // URL de la API con el idioma
+    if (!idioma) {
+        resultContainer.innerHTML = '<p style="color:red;">Por favor ingrese un idioma válido.</p>';
+        return;
+    }
 
-  // Verificar si se ingresó un idioma
-  if (!language) {
-      $('#resultContainer').html('<p style="color:red;">Por favor ingrese un idioma válido.</p>');
-      return;
-  }
+    fetch(`https://p-1-streaming.onrender.com/peliculas_idioma/${idioma}`)
+        .then(response => response.json())
+        .then(data => {
+            resultContainer.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+        })
+        .catch(error => {
+            resultContainer.innerHTML = `<p style="color:red;">Error al buscar datos: ${error}</p>`;
+        });
+});
 
-  // Hacer una solicitud GET a la API con el idioma
-  fetch(url)
-      .then(response => {
-          // Verificar si la respuesta es exitosa
-          if (!response.ok) {
-              throw new Error('No se encontraron datos o hubo un error en la solicitud');
-          }
-          return response.json();  // Convertir la respuesta a JSON
-      })
-      .then(data => {
-          // Mostrar los resultados en la página
-          if (data && data.length > 0) {
-              var movieCount = data.length;  // Suponiendo que la respuesta es una lista de películas
-              var movieList = "<ul>";
 
-              // Crear una lista de películas
-              data.forEach(movie => {
-                  movieList += `<li><strong>${movie.title}</strong> (${movie.year})</li>`;
-              });
-              movieList += "</ul>";
-
-              $('#resultContainer').html(`
-                  <p><strong>Cantidad de películas en el idioma "${language}":</strong> ${movieCount}</p>
-                  <h4>Lista de películas:</h4>
-                  ${movieList}
-              `);
-          } else {
-              $('#resultContainer').html('<p>No se encontraron películas para el idioma ingresado.</p>');
-          }
-      })
-      .catch(error => {
-          // Mostrar mensaje de error
-          $('#resultContainer').html(`<p style="color:red;">Error: ${error.message}</p>`);
-      });
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+        labels: ['Español', 'Inglés', 'Francés', 'Alemán'],
+        datasets: [{
+            label: 'Películas por idioma',
+            data: [120, 200, 80, 45],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.6)',
+                'rgba(54, 162, 235, 0.6)',
+                'rgba(255, 206, 86, 0.6)',
+                'rgba(75, 192, 192, 0.6)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)'
+            ],
+            borderWidth: 1
+        }]
+    },
+    options: {
+        responsive: true,
+        plugins: {
+            legend: {
+                position: 'top',
+            },
+            title: {
+                display: true,
+                text: 'Películas por Idioma'
+            }
+        }
+    }
 });
