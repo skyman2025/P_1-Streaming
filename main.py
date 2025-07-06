@@ -4,13 +4,26 @@ import pandas as pd
 import numpy as np
 import os
 
+
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+
 from pandasql import sqldf
 from datetime import datetime
 
 os.environ["OPENBLAS_L2SIZE"]="512k"
 
 app = FastAPI(title = 'Consultas en Plataforma sobre Peliculas')
+
+# Habilitar CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # o poné ["http://localhost:8000"] para limitar a tu frontend local
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 dft=pd.read_csv('https://raw.githubusercontent.com/skyman2025/P_1-Streaming/refs/heads/main/raw/final_Api_12.csv')
 #--------------------------------------------------------------------------------------
