@@ -140,13 +140,13 @@ async function cargarDatos() {
                 legend: {
                     position: 'top',
                     labels: {
-                        color: 'rgba(29, 27, 28, 0.6)'
+                        color: '#000000'
                     }
                 },
                 title: {
                     display: true,
                     text: 'Películas por Idioma',
-                    color: 'rgba(29, 27, 28, 0.6)',
+                    color: '#000000',
                     font: {
                         size: 18
                     }
@@ -155,13 +155,13 @@ async function cargarDatos() {
             scales: {
                 x: {
                     ticks: {
-                        color: '#rgba(29, 27, 28, 0.6)'
+                        color: '#000000'
                     }
                 },
                 y: {
                     beginAtZero: true,
                     ticks: {
-                        color: '#rgba(29, 27, 28, 0.6)'
+                        color: '#000000'
                     }
                 }
             }
