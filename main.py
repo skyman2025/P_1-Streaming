@@ -44,17 +44,27 @@ def contacto():
  
 #--------------------------------------------------------------------------------------
  
+# @app.get("/peliculas_idioma/{Idioma}")
+# def peliculas_idioma( Idioma: str ):
+#   #debe ingresar la abreviatura de idioma ya que estan en una misma denominacion del alfabeto
+#   cant=0
+#   for i in range (len(dft["original_language"])):
+#       if Idioma == dft['original_language'][i]:
+#           cant=cant +1
+#   if cant==0:
+#       return ("Ingreso incorrecto, recuerde escribir todo en minúsculas.")
+#   else:
+#       return {'Cantidad de pelicula que fueron estrenadas':cant,' en el Idioma':Idioma}
+
+
 @app.get("/peliculas_idioma/{Idioma}")
-def peliculas_idioma( Idioma: str ):
-  #debe ingresar la abreiatura de idioma ya que estan en una misma denominacion del alfabeto
-  cant=0
-  for i in range (len(dft["original_language"])):
-      if Idioma == dft['original_language'][i]:
-          cant=cant +1
-  if cant==0:
-      return ("Ingreso incorrecto, recuerde escribir todo en minúsculas.")
-  else:
-      return {'Cantidad de pelicula que fueron estrenadas':cant,' en el Idioma':Idioma}
+def peliculas_idioma(Idioma: str):
+    cantidad = dft[dft['original_language'] == Idioma].shape[0]
+
+    if cantidad == 0:
+        return {"error": "Idioma no encontrado. Asegurate de escribirlo en minúsculas."}
+
+    return {"Idioma": Idioma, "Cantidad": int(cantidad)}
 # ---------------------
 # peliculas_idioma('en')
 #--------------------------------------------------------------------------------------
