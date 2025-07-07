@@ -115,12 +115,13 @@ async function cargarDatos() {
             const respuesta = await  fetch(`https://p-1-streaming.onrender.com/peliculas_idioma/${idioma}`);
             const json = await respuesta.json();
             datos.push(json['Cantidad de pelicula que fueron estrenadas'] || 0);
+            console.log("Datos cargados:", datos);
         } catch (error) {
             console.error(`Error al obtener datos para ${idioma}:`, error);
             datos.push(0);
         }
     }
-
+    console.log("Datos cargados:", datos);
     const ctx = document.getElementById('myChart').getContext('2d');
     new Chart(ctx, {
         type: 'bar',
